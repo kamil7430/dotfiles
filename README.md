@@ -7,8 +7,9 @@ My dotfiles. You guys all know what that means ;D
 ```bash
 git clone --bare git@github.com:kamil7430/dotfiles.git "$HOME/.dotfiles"
 
-# needed before checkout; afterwards it comes from the tracked .bashrc
-alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+echo "# dotfiles git alias" >> ~/.bashrc
+echo "alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> ~/.bashrc
+source ~/.bashrc
 
 dot config --local status.showUntrackedFiles no
 dot checkout
