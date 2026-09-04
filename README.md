@@ -8,7 +8,7 @@ My dotfiles. You guys all know what that means ;D
 git clone --bare git@github.com:kamil7430/dotfiles.git "$HOME/.dotfiles"
 
 echo "# dotfiles git alias" >> ~/.bashrc
-echo "alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> ~/.bashrc
+echo "alias dot='git --git-dir=\$HOME/.dotfiles --work-tree=\$HOME'" >> ~/.bashrc
 source ~/.bashrc
 
 dot config --local status.showUntrackedFiles no
